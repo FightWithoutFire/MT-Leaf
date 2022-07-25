@@ -1,8 +1,8 @@
-FROM alpine
+FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
 WORKDIR /vulivuli/automation
 
-EXPOSE 80
+EXPOSE 8080
 
 ADD ./target/leaf.jar /app.jar
 
