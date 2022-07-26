@@ -1,5 +1,6 @@
 # Leaf
 ```shell
+docker run -p 3306:3306 --name mysql -v /data/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=wHCpMLnkih73ZxaGHsy7 -d mysql:8.0.29
 docker run -e "ZOO_INIT_LIMIT=10" --name zookeeper --restart always -d zookeeper
 docker network create leaf
 docker network connect zookeeper leaf
