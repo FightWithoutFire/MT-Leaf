@@ -1,5 +1,10 @@
 # Leaf
-
+```shell
+docker run -e "ZOO_INIT_LIMIT=10" --name zookeeper --restart always -d zookeeper
+docker network create leaf
+docker network connect zookeeper leaf
+docker run --name leaf --restart always -d leaf --network leaf
+```
 > There are no two identical leaves in the world.
 >
 > 世界上没有两片完全相同的树叶。
